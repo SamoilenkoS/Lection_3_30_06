@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace Lection_3_30_06
 {
@@ -280,7 +281,73 @@ namespace Lection_3_30_06
 
         static void Main(string[] args)
         {
-            Console.WriteLine(GetCapitalizationOfNumber(25));
+            int userChoice;
+            do
+            {
+                Console.WriteLine("Enter 1 to task 1");
+                Console.WriteLine("Enter 2 to task 2");
+                Console.WriteLine("Enter 0 to exit");
+                userChoice = Convert.ToInt32(Console.ReadLine());
+                switch (userChoice)
+                {
+                    case 1:
+                        Console.WriteLine("call task 1");
+                        break;
+                    case 2:
+                        Console.WriteLine("Call task 2");
+                        break;
+                }
+            } while (userChoice != 0);
+            //int a = 240;
+            //for (int ia = 0; false; i++)
+            //{
+
+            //}
+            //while (false)
+            //{
+            //    Console.WriteLine(a);
+            //    a /= 2;
+            //}
+
+            //do
+            //{
+            //    Console.WriteLine(a);
+            //    a /= 2;
+            //} while (false);
+            //for (int i = 100; i >= 0; i -= 10)
+            //{
+            //    Console.WriteLine(i);
+            //}
+
+            //for (int i = 0; i < 10;)
+            //{
+            //    Console.WriteLine(++i);
+            //}
+
+            //for (int i = 0;; i++)
+            //{
+            //    //if(i < 0)
+            //    //{
+            //    //    Console.WriteLine("We are cycled!");
+            //    //}
+            //    //Console.WriteLine(i);
+            //    //if(i % 100_000 == 0)
+            //    //{
+            //    //    Console.WriteLine(i);
+            //    //}
+            //}
+
+            //for (; ; )
+            //{
+            //    Console.WriteLine("Hello world!");
+            //}
+
+            //for (int i = 10; i <= 99; ++i)
+            //{
+            //    Console.WriteLine(GetCapitalizationOfNumber(i));
+            //}
+
+            Console.WriteLine("End of this cycle!");
         }
     }
 }
