@@ -279,25 +279,105 @@ namespace Lection_3_30_06
             return first + second;
         }
 
-        static void Main(string[] args)
+        static int Sum(int from = 100, int to = 300)
         {
-            int userChoice;
-            do
+            int result = default;
+            for (int i = from; i <= to; i++)
             {
-                Console.WriteLine("Enter 1 to task 1");
-                Console.WriteLine("Enter 2 to task 2");
-                Console.WriteLine("Enter 0 to exit");
-                userChoice = Convert.ToInt32(Console.ReadLine());
-                switch (userChoice)
+                result += i;
+            }
+
+            return result;
+        }
+
+        static void MultiplicationTable()
+        {
+            for (int i = 2; i <= 9; i++)
+            {
+                for (int j = 1; j <= 10; j++)
                 {
-                    case 1:
-                        Console.WriteLine("call task 1");
-                        break;
-                    case 2:
-                        Console.WriteLine("Call task 2");
-                        break;
+                    Console.WriteLine($"{i}*{j}={i * j}");
                 }
-            } while (userChoice != 0);
+
+                Console.WriteLine();
+            }
+        }
+
+        static float RowSum(int n)
+        {
+            float sum = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                sum += 1f / i;
+            }
+
+            return sum;
+        }
+
+        static float SquareRowSum(int n)
+        {
+            float sum = 0;
+            for (int i = n; i >= 1; i--)
+            {
+                sum = (float)Math.Sqrt(i + sum);
+            }
+
+            return sum;
+        }
+
+        static int FindBiggestNForA(float a)
+        {
+            float sum = 0;
+            int n = 1;
+
+            while ((sum + 1f / n) < a)
+            {
+                sum += 1f / n++;
+            }
+
+            return --n;
+        }
+
+        //static async Task Main(string[] args)
+        //{
+        //    for (int i = 0; i < 10; i++)
+        //    {
+        //        Console.WriteLine((char)7);
+        //        await Task.Delay(100);
+        //    }
+
+        static void Main()
+        {
+            Console.WriteLine('Z' - 'A');
+            for (int i = 0; i < 128; i++)
+            {
+                Console.WriteLine(i + "\t" + (char)i);
+            }
+            //Console.WriteLine(Sum());//by default
+            //Console.WriteLine(Sum(to: 500));//show only right
+            //Console.WriteLine(Sum(from: 10));//only left
+            //Console.WriteLine(Sum(10));
+            //Console.WriteLine(Sum(from: 50, to: 500));//show both
+            //Console.WriteLine(Sum(to: 590, from: 500));//show both
+
+            //Console.WriteLine(i);
+            //int userChoice;
+            //do
+            //{
+            //    Console.WriteLine("Enter 1 to task 1");
+            //    Console.WriteLine("Enter 2 to task 2");
+            //    Console.WriteLine("Enter 0 to exit");
+            //    userChoice = Convert.ToInt32(Console.ReadLine());
+            //    switch (userChoice)
+            //    {
+            //        case 1:
+            //            Console.WriteLine("call task 1");
+            //            break;
+            //        case 2:
+            //            Console.WriteLine("Call task 2");
+            //            break;
+            //    }
+            //} while (userChoice != 0);
             //int a = 240;
             //for (int ia = 0; false; i++)
             //{
