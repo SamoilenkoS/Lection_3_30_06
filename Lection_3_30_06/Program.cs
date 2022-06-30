@@ -351,8 +351,17 @@ namespace Lection_3_30_06
             Console.WriteLine('Z' - 'A');
             for (int i = 0; i < 128; i++)
             {
-                Console.WriteLine(i + "\t" + (char)i);
+                Console.WriteLine(
+                    i + "\t" +
+                    (char)i + "\t" +
+                    char.IsLetter((char)i) + "\t" +
+                    char.IsDigit((char)i));
             }
+
+            uint a = 10;
+
+            int x = int.MaxValue;
+            bool test = char.IsLetter('4');
             //Console.WriteLine(Sum());//by default
             //Console.WriteLine(Sum(to: 500));//show only right
             //Console.WriteLine(Sum(from: 10));//only left
